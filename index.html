@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Clicker</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&display=swap');
+    </style>
+</head>
+<body>
+    <div class="header">
+        <p id="total-points" onclick="openStore()">Click: 0</p>
+    </div>
+    <div class="container">
+        <div id="clickable-object">
+            <img src="/img/batata_00.png" alt="Objeto Clicável" id="click-object">
+        </div>
+        <div class="click-info">
+            <p id="click-count">0</p>
+            <button id="save-clicks" class="btn">Salvar</button>
+        </div>
+    </div>
+
+    <!-- Pop-up da loja -->
+    <div id="store-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeStore()">&times;</span>
+            <p>Potato Store</p>
+            <p>Troque seus cliques por batatinhas ou compre com dinheiro real</p>
+            <!-- Conteúdo da loja -->
+            <div class="store-container">
+                <div class="store-item">
+                    <img src="/img/batata_01.jpg" alt="Objeto da Loja 1">
+                    <p>Click 5<br>R$ 31,99</p>
+                    <button onclick="buyWithPoints(100)">Comprar com Click</button>
+                    <button onclick="buyWithMoney()">Comprar com Dinheiro</button>
+                </div>
+                <div class="store-item">
+                    <img src="/img/batata_02.jpg" alt="Objeto da Loja 2">
+                    <p>Click 20.00,00<br>R$ 51,99</p>
+                    <button onclick="buyWithPoints(200)">Comprar com Click</button>
+                    <button onclick="buyWithMoney()">Comprar com Dinheiro</button>
+                </div>
+                <div class="store-item">
+                    <img src="/img/batata_03.jpg" alt="Objeto da Loja 3">
+                    <p>Click 30.000,00<br>R$ 99.99</p>
+                    <button onclick="buyWithPoints(300)">Comprar com Click</button>
+                    <button onclick="buyWithMoney()">Comprar com Dinheiro</button>
+                </div>
+                <!-- Adicione mais itens conforme necessário -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
